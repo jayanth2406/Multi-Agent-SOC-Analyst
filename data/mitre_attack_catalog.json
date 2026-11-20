@@ -1,0 +1,58 @@
+[
+  {
+    "technique_id": "T1110",
+    "name": "Brute Force",
+    "tactic": "Credential Access",
+    "description": "Adversaries may use brute force techniques to attempt access to accounts when passwords or PINs are unknown. A system may be configured to lock out accounts after a certain number of failed attempts.",
+    "subtechniques": ["T1110.001 (Password Guessing)", "T1110.002 (Password Cracking)", "T1110.003 (Password Spraying)", "T1110.004 (Credential Stuffing)"],
+    "detection": "Monitor authentication logs (e.g. Windows Event ID 4625, Linux /var/log/auth.log) for bursts of failed authentication attempts from a single or distributed IP sources."
+  },
+  {
+    "technique_id": "T1046",
+    "name": "Network Service Discovery",
+    "tactic": "Discovery",
+    "description": "Adversaries may attempt to get a listing of services running on remote hosts and local network infrastructure devices to identify accessible services and potential attack targets.",
+    "subtechniques": ["Port Scan", "SYN Stealth Sweep", "Service Banner Grabbing"],
+    "detection": "Monitor network telemetry and firewall flow logs for rapid connections or connection attempts across a broad range of ports."
+  },
+  {
+    "technique_id": "T1059",
+    "name": "Command and Scripting Interpreter",
+    "tactic": "Execution",
+    "description": "Adversaries may abuse command and script interpreters to execute commands, scripts, or binaries, including PowerShell, Windows Command Shell (cmd.exe), and Unix shells.",
+    "subtechniques": ["T1059.001 (PowerShell)", "T1059.003 (Windows Command Shell)", "T1059.004 (Unix Shell)"],
+    "detection": "Monitor process creation events (e.g. Sysmon Event ID 1) with command line arguments for unusual parent-child process relationships."
+  },
+  {
+    "technique_id": "T1071",
+    "name": "Application Layer Protocol",
+    "tactic": "Command and Control",
+    "description": "Adversaries may communicate using application layer protocols (e.g., HTTP, HTTPS, DNS) to blend in with normal network traffic and avoid detection by network monitoring systems.",
+    "subtechniques": ["T1071.001 (Web Protocols: HTTP/HTTPS)", "T1071.004 (DNS)"],
+    "detection": "Analyze outbound web traffic for regular beaconing intervals, rare user-agents, dynamic DNS domains, and unusually large payload transfers."
+  },
+  {
+    "technique_id": "T1078",
+    "name": "Valid Accounts",
+    "tactic": "Defense Evasion / Initial Access",
+    "description": "Adversaries may obtain and abuse credentials of existing accounts as a means of gaining Initial Access, Persistence, Privilege Escalation, or Defense Evasion.",
+    "subtechniques": ["T1078.001 (Default Accounts)", "T1078.002 (Domain Accounts)", "T1078.003 (Local Accounts)"],
+    "detection": "Monitor for anomalous user behavior, such as logins from unusual IP geolocations, odd hours, or concurrent sessions across disparate physical locations."
+  },
+  {
+    "technique_id": "T1566",
+    "name": "Phishing",
+    "tactic": "Initial Access",
+    "description": "Adversaries may send phishing messages with malicious attachments or links to gain initial access to victim systems.",
+    "subtechniques": ["T1566.001 (Spearphishing Attachment)", "T1566.002 (Spearphishing Link)"],
+    "detection": "Inspect inbound email gateways and monitor endpoint process spawning from email client executables."
+  },
+  {
+    "technique_id": "T1003",
+    "name": "OS Credential Dumping",
+    "tactic": "Credential Access",
+    "description": "Adversaries may attempt to dump credentials to obtain account login and credential material, normally in the form of a hash or a clear text password, from the LSASS process or SAM database.",
+    "subtechniques": ["T1003.001 (LSASS Memory)"],
+    "detection": "Monitor process access events targeting lsass.exe (e.g. Sysmon Event ID 10 with PROCESS_VM_READ permissions)."
+  }
+]
