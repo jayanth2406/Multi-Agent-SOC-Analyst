@@ -130,8 +130,11 @@ class NeuralDecisionEngine:
 class System1TriageModel:
     """Lightweight, sub-millisecond local decision model (<500MB)."""
 
-    def __init__(self, model_path: str = "locals/models/system1_triage.joblib"):
-        self.model_path = Path(model_path)
+    def __init__(self, model_path: str = "models/system1_triage.joblib"):
+        p = Path(model_path)
+        if not p.exists() and Path("locals/models/system1_triage.joblib").exists():
+            p = Path("locals/models/system1_triage.joblib")
+        self.model_path = p
         self.pipeline: Optional[Any] = None
         self.category_classes_: Optional[List[str]] = None
         self.is_trained = False
@@ -163,9 +166,11 @@ class System1TriageModel:
             f"failed:{alert.failed_attempts or 0} {alert.description} {meta_str}"
         )
 
-    def train_on_corpus(self, train_data_path: str = "locals/data/soc_alerts_train.json") -> Dict[str, float]:
+    def train_on_corpus(self, train_data_path: str = "data/soc_alerts_train.json") -> Dict[str, float]:
         """Train the System 1 classifier on normalized SOC training alerts."""
         path = Path(train_data_path)
+        if not path.exists() and Path("locals/data/soc_alerts_train.json").exists():
+            path = Path("locals/data/soc_alerts_train.json")
         if not path.exists():
             raise FileNotFoundError(f"Training corpus not found at {path}")
 
@@ -249,7 +254,9 @@ class System1TriageModel:
 
         if not self.is_trained or self.pipeline is None:
             # Lazy auto-train if dataset exists
-            train_path = Path("locals/data/soc_alerts_train.json")
+            train_path = Path("data/soc_alerts_train.json")
+            if not train_path.exists() and Path("locals/data/soc_alerts_train.json").exists():
+                train_path = Path("locals/data/soc_alerts_train.json")
             if train_path.exists():
                 self.train_on_corpus(str(train_path))
             else:

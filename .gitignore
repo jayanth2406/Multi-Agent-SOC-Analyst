@@ -9,3 +9,7 @@ htmlcov/
 .DS_Store
 plans/
 locals/
+*.db
+*.sqlite
+*.db-journal
+audit_trail.jsonl

@@ -35,7 +35,7 @@ st.markdown(
 
 # Sidebar: System Telemetry Status
 st.sidebar.header("Telemetry Database Status")
-db_path = Path("locals/data/soc_telemetry.db")
+db_path = Path("data/soc_telemetry.db") if Path("data/soc_telemetry.db").exists() else Path("locals/data/soc_telemetry.db")
 if db_path.exists():
     conn = sqlite3.connect(db_path)
     cur = conn.cursor()
@@ -53,7 +53,7 @@ st.sidebar.markdown("---")
 reviewer_id = st.sidebar.text_input("Current Analyst Identity", value="analyst_lead_01")
 
 # Load sample alerts
-benchmark_path = Path("locals/benchmarks/golden_soc_benchmark.json")
+benchmark_path = Path("benchmarks/golden_soc_benchmark.json") if Path("benchmarks/golden_soc_benchmark.json").exists() else Path("locals/benchmarks/golden_soc_benchmark.json")
 sample_alerts = []
 if benchmark_path.exists():
     with open(benchmark_path, "r", encoding="utf-8") as f:

@@ -22,13 +22,13 @@ if str(PROJECT_ROOT) not in sys.path:
 from backend.models.schemas import Alert
 
 
-DATA_DIR = Path("locals/data")
+DATA_DIR = Path("data")
 DATA_DIR.mkdir(parents=True, exist_ok=True)
 
-FINETUNE_DIR = Path("locals/finetune")
+FINETUNE_DIR = Path("finetune")
 FINETUNE_DIR.mkdir(parents=True, exist_ok=True)
 
-BENCHMARK_DIR = Path("locals/benchmarks")
+BENCHMARK_DIR = Path("benchmarks")
 BENCHMARK_DIR.mkdir(parents=True, exist_ok=True)
 
 

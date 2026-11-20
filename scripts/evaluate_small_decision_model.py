@@ -209,8 +209,8 @@ def main():
     print(f"  Average Decision Latency:  {avg_latency:.2f} ms")
     print("=========================================================================================\n")
 
-    # Save results to locals
-    out_path = Path("locals/benchmarks/small_decision_model_eval.json")
+    # Save results to benchmarks/
+    out_path = Path("benchmarks/small_decision_model_eval.json")
     out_path.parent.mkdir(parents=True, exist_ok=True)
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump({

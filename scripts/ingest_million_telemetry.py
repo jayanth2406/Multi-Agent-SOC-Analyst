@@ -18,7 +18,7 @@ from pathlib import Path
 from datasets import load_dataset
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-DB_PATH = PROJECT_ROOT / "locals" / "data" / "soc_telemetry.db"
+DB_PATH = PROJECT_ROOT / "data" / "soc_telemetry.db"
 
 
 def int_to_ipv4(dec_ip: int) -> str:

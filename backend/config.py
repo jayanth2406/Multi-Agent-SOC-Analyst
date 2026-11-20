@@ -31,15 +31,16 @@ class Settings(BaseSettings):
     embedding_model: str = Field(default="sentence-transformers/all-MiniLM-L6-v2")
 
     # Local Small System 1 Decision Model (<500MB)
-    system1_model_path: str = Field(default="locals/models/system1_triage.joblib")
+    system1_model_path: str = Field(default="models/system1_triage.joblib")
     system1_confidence_threshold: float = Field(default=0.85)
     system1_architecture: str = Field(default="statistical")  # "statistical" | "neural" | "hybrid"
     system1_neural_model_id: str = Field(default="typeform/distilbert-base-uncased-mnli")
 
-    # Local paths
-    local_data_dir: str = Field(default="locals/data")
+    # Storage paths
+    data_dir: str = Field(default="data")
+    local_data_dir: str = Field(default="data")
     local_logs_dir: str = Field(default="locals/logs")
-    benchmark_output_dir: str = Field(default="locals/benchmarks")
+    benchmark_output_dir: str = Field(default="benchmarks")
 
     def get_effective_api_key(self) -> str | None:
         """Return the API key from either openai_api_key or llm_api_key."""

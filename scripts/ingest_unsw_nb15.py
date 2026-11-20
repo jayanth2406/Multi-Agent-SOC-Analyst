@@ -4,7 +4,7 @@ import sqlite3
 from pathlib import Path
 from datasets import load_dataset
 
-DB_PATH = Path("locals/data/soc_telemetry.db")
+DB_PATH = Path("data/soc_telemetry.db")
 
 def ingest_unsw():
     print("Loading lacg030175/UNSW-NB15 from Hugging Face...")

@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-11-20T22:12:15Z",
+  "total_evaluated": 49,
+  "metrics": {
+    "rules_baseline": {
+      "classification_accuracy": 59.18,
+      "category_accuracy": 14.29,
+      "avg_latency_ms": 0.016
+    },
+    "system1_decision_model": {
+      "classification_accuracy": 100.0,
+      "category_accuracy": 100.0,
+      "avg_latency_ms": 7.286
+    },
+    "multi_agent_pipeline": {
+      "disposition_accuracy": 83.67,
+      "avg_latency_ms": 44.655,
+      "total_evidence_citations": 180,
+      "avg_evidence_per_incident": 3.7,
+      "total_remediation_actions": 112
+    }
+  }
+}

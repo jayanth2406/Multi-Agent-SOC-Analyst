@@ -18,7 +18,7 @@ from pydantic import BaseModel, Field
 from backend.agents.report_generator import ActionProposal, IncidentReport
 
 logger = logging.getLogger("hitl_simulator")
-AUDIT_LOG_PATH = Path("locals/logs/audit_trail.jsonl")
+AUDIT_LOG_PATH = Path("logs/audit_trail.jsonl") if Path("logs").exists() else Path("locals/logs/audit_trail.jsonl")
 AUDIT_LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
 
 

@@ -19,10 +19,10 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
-DB_PATH = PROJECT_ROOT / "locals" / "data" / "soc_telemetry.db"
-DATA_DIR = PROJECT_ROOT / "locals" / "data"
-BENCHMARK_DIR = PROJECT_ROOT / "locals" / "benchmarks"
-FINETUNE_DIR = PROJECT_ROOT / "locals" / "finetune"
+DB_PATH = PROJECT_ROOT / "data" / "soc_telemetry.db"
+DATA_DIR = PROJECT_ROOT / "data"
+BENCHMARK_DIR = PROJECT_ROOT / "benchmarks"
+FINETUNE_DIR = PROJECT_ROOT / "finetune"
 
 DATA_DIR.mkdir(parents=True, exist_ok=True)
 BENCHMARK_DIR.mkdir(parents=True, exist_ok=True)

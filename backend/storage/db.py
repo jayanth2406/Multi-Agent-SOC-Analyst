@@ -6,7 +6,7 @@ import sqlite3
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
-DB_PATH = Path("locals/data/soc_telemetry.db")
+DB_PATH = Path("data/soc_telemetry.db") if Path("data/soc_telemetry.db").exists() else Path("locals/data/soc_telemetry.db")
 
 
 def get_db_connection() -> sqlite3.Connection:

