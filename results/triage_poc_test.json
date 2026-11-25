@@ -1,0 +1,207 @@
+{
+  "split": "test",
+  "n_train": 597,
+  "n_eval": 196,
+  "alert_set_fixture": false,
+  "generator_version": "0.2.0",
+  "approaches": {
+    "rules": {
+      "confidence_threshold": 0.5,
+      "routing_target_met_on_val": true,
+      "metrics": {
+        "threat_recall": 1.0,
+        "threat_precision": 0.740506329113924,
+        "disposition_macro_f1": 0.592579453067258,
+        "category_accuracy": 0.9693877551020408,
+        "severity_exact": 0.7857142857142857,
+        "severity_under": 0.00510204081632653,
+        "under_investigated": 0.0,
+        "share_routed_full": 0.8469387755102041
+      },
+      "ci95": {
+        "threat_recall": [
+          1.0,
+          1.0
+        ],
+        "threat_precision": [
+          0.6710505093378608,
+          0.8089245306738183
+        ],
+        "disposition_macro_f1": [
+          0.5638384417417256,
+          0.6190434176442005
+        ],
+        "category_accuracy": [
+          0.9438775510204082,
+          0.9897959183673469
+        ]
+      },
+      "per_disposition": {
+        "TP": {
+          "n": 117,
+          "recall": 1.0,
+          "precision": 0.740506329113924
+        },
+        "BTP": {
+          "n": 44,
+          "recall": 0.8636363636363636,
+          "precision": 1.0
+        },
+        "FP": {
+          "n": 35,
+          "recall": 0.0,
+          "precision": 0.0
+        }
+      }
+    },
+    "structured": {
+      "confidence_threshold": 0.99,
+      "routing_target_met_on_val": true,
+      "metrics": {
+        "threat_recall": 0.9145299145299145,
+        "threat_precision": 0.9553571428571429,
+        "disposition_macro_f1": 0.9114992721979621,
+        "category_accuracy": 1.0,
+        "severity_exact": 0.9183673469387755,
+        "severity_under": 0.05612244897959184,
+        "under_investigated": 0.0,
+        "share_routed_full": 0.8163265306122449
+      },
+      "ci95": {
+        "threat_recall": [
+          0.8620619568264648,
+          0.9636445536445536
+        ],
+        "threat_precision": [
+          0.9152502398464982,
+          0.9903846153846154
+        ],
+        "disposition_macro_f1": [
+          0.8692755315292262,
+          0.9483358187388011
+        ],
+        "category_accuracy": [
+          1.0,
+          1.0
+        ]
+      },
+      "per_disposition": {
+        "TP": {
+          "n": 117,
+          "recall": 0.9145299145299145,
+          "precision": 0.9553571428571429
+        },
+        "BTP": {
+          "n": 44,
+          "recall": 1.0,
+          "precision": 1.0
+        },
+        "FP": {
+          "n": 35,
+          "recall": 0.8571428571428571,
+          "precision": 0.75
+        }
+      }
+    },
+    "tfidf": {
+      "confidence_threshold": 0.8,
+      "routing_target_met_on_val": true,
+      "metrics": {
+        "threat_recall": 0.7264957264957265,
+        "threat_precision": 0.794392523364486,
+        "disposition_macro_f1": 0.64477224184671,
+        "category_accuracy": 0.7295918367346939,
+        "severity_exact": 0.6938775510204082,
+        "severity_under": 0.20408163265306123,
+        "under_investigated": 0.0,
+        "share_routed_full": 0.9642857142857143
+      },
+      "ci95": {
+        "threat_recall": [
+          0.6440677966101694,
+          0.8
+        ],
+        "threat_precision": [
+          0.7211430180180181,
+          0.8666814159292036
+        ],
+        "disposition_macro_f1": [
+          0.5775544126548734,
+          0.7056762830339289
+        ],
+        "category_accuracy": [
+          0.6683673469387755,
+          0.7908163265306123
+        ]
+      },
+      "per_disposition": {
+        "TP": {
+          "n": 117,
+          "recall": 0.7264957264957265,
+          "precision": 0.794392523364486
+        },
+        "BTP": {
+          "n": 44,
+          "recall": 0.9090909090909091,
+          "precision": 0.8
+        },
+        "FP": {
+          "n": 35,
+          "recall": 0.34285714285714286,
+          "precision": 0.3076923076923077
+        }
+      }
+    },
+    "hybrid": {
+      "confidence_threshold": 0.99,
+      "routing_target_met_on_val": true,
+      "metrics": {
+        "threat_recall": 0.9145299145299145,
+        "threat_precision": 0.9553571428571429,
+        "disposition_macro_f1": 0.9114992721979621,
+        "category_accuracy": 1.0,
+        "severity_exact": 0.9183673469387755,
+        "severity_under": 0.05612244897959184,
+        "under_investigated": 0.0,
+        "share_routed_full": 0.826530612244898
+      },
+      "ci95": {
+        "threat_recall": [
+          0.8620619568264648,
+          0.9636445536445536
+        ],
+        "threat_precision": [
+          0.9152502398464982,
+          0.9903846153846154
+        ],
+        "disposition_macro_f1": [
+          0.8692755315292262,
+          0.9483358187388011
+        ],
+        "category_accuracy": [
+          1.0,
+          1.0
+        ]
+      },
+      "per_disposition": {
+        "TP": {
+          "n": 117,
+          "recall": 0.9145299145299145,
+          "precision": 0.9553571428571429
+        },
+        "BTP": {
+          "n": 44,
+          "recall": 1.0,
+          "precision": 1.0
+        },
+        "FP": {
+          "n": 35,
+          "recall": 0.8571428571428571,
+          "precision": 0.75
+        }
+      },
+      "dismiss_cutoff": 0.5,
+      "dismiss_cutoff_met_on_val": true
+    }
+  }
+}
