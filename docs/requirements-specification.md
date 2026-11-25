@@ -116,7 +116,7 @@ Not every alert gets a full investigation. Informational and Low alerts get a **
 | Level | What it means | Investigation | Default proposed action |
 | --- | --- | --- | --- |
 | Informational | Not a threat (BTP or FP) | Light | `close_benign` |
-| Low | An attempt against a low-value or ordinary asset | Light | `close_benign` or `escalate_tier2` |
+| Low | An attempt against a low-value or ordinary asset | Light | `escalate_tier2`, or `block_ip` when the source is external and threat intel confirms it is malicious |
 | Medium | An attempt on a critical asset, or a partial success | Full | Depends on category |
 | High | Compromise of an ordinary asset, or disruption of a critical one | Full | Containment actions for analyst approval |
 | Critical | Compromise of a critical asset, or an attacker spreading on high-value systems | Full; top of the queue | Containment actions for analyst approval |

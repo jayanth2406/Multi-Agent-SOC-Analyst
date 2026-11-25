@@ -36,6 +36,12 @@ class Settings(BaseSettings):
     system1_architecture: str = Field(default="statistical")  # "statistical" | "neural" | "hybrid"
     system1_neural_model_id: str = Field(default="typeform/distilbert-base-uncased-mnli")
 
+    # Triage agent v1 (requirements spec)
+    triage_model_path: str = Field(default="models/triage_poc.joblib")
+    asset_inventory_path: str = Field(default="data/poc/asset_inventory.yaml")
+    repeat_source_threshold: int = Field(default=5)       # safeguard 5: alerts per source in the window
+    repeat_source_window_hours: int = Field(default=24)
+
     # Storage paths
     data_dir: str = Field(default="data")
     local_data_dir: str = Field(default="data")

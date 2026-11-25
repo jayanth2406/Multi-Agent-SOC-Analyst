@@ -4,7 +4,8 @@ from typing import Any, Dict, List
 from fastapi import FastAPI, HTTPException
 
 from backend.agents.report_generator import IncidentReport
-from backend.models.schemas import Alert, TriageResult
+from backend.agents.triage_agent import get_triage_agent
+from backend.models.schemas import Alert, SocAlert, TriageDecision, TriageResult
 from backend.orchestration.graph import soc_orchestrator
 from backend.services.hitl_simulator import AuditRecord, ReviewDecision, hitl_service
 from backend.services.triage_service import triage_service
@@ -22,9 +23,22 @@ def health() -> dict[str, str]:
     return {"status": "ok"}
 
 
+@app.post("/api/v1/triage", response_model=TriageDecision)
+def triage_v1(alert: SocAlert) -> TriageDecision:
+    """Triage one alert with the v1 Triage agent (taxonomy, severity rubric, light/full routing)."""
+    return get_triage_agent().triage(alert)
+
+
+@app.post("/api/v1/triage/batch", response_model=list[TriageDecision])
+def triage_v1_batch(alerts: list[SocAlert]) -> list[TriageDecision]:
+    """Triage a batch of alerts, in the order given."""
+    agent = get_triage_agent()
+    return [agent.triage(a) for a in alerts]
+
+
 @app.post("/alerts/triage", response_model=TriageResult)
 def triage_alert(alert: Alert) -> TriageResult:
-    """Validate and triage one incoming security alert (PoC backward compatible)."""
+    """Legacy keyword triage (old alert format). Use /api/v1/triage for the v1 agent."""
     return triage_service.triage(alert)
 
 

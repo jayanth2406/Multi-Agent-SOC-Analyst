@@ -13,3 +13,6 @@ locals/
 *.sqlite
 *.db-journal
 audit_trail.jsonl
+
+# raw public datasets (download separately, see docs/poc-alert-set.md)
+data/raw/

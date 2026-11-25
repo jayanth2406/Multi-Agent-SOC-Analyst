@@ -1,0 +1,97 @@
+# Draft asset inventory for the Semester 7 proof of concept.
+#
+# This is a minimal stand-in for the full inventory listed under "To be done"
+# in docs/requirements-specification.md. It describes one fictional
+# organisation. Replace or extend it when the real inventory is built; the
+# alert generator and the severity rubric read tiers from this file.
+#
+# Tiers: Low | Standard | High | Critical  (see the severity rubric)
+
+organisation: "Example Corp (fictional)"
+internal_networks:
+  - 10.10.0.0/16
+
+hosts:
+  # Critical: domain controllers, production databases, security tooling
+  - {name: dc-01,        ip: 10.10.1.10,  role: domain_controller,   tier: Critical}
+  - {name: db-prod-01,   ip: 10.10.1.20,  role: production_database, tier: Critical}
+  - {name: siem-01,      ip: 10.10.1.30,  role: security_tooling,    tier: Critical}
+  - {name: scanner-01,   ip: 10.10.1.50,  role: vulnerability_scanner, tier: Critical}
+  # High: production servers
+  - {name: web-prod-01,  ip: 10.10.2.10,  role: web_server,          tier: High}
+  - {name: web-prod-02,  ip: 10.10.2.11,  role: web_server,          tier: High}
+  - {name: app-prod-01,  ip: 10.10.2.20,  role: application_server,  tier: High}
+  - {name: mail-01,      ip: 10.10.2.30,  role: mail_server,         tier: High}
+  - {name: backup-01,    ip: 10.10.2.40,  role: backup_server,       tier: High}
+  - {name: vpn-01,       ip: 10.10.2.50,  role: vpn_gateway,         tier: High}
+  # Standard: user workstations
+  - {name: ws-fin-101,   ip: 10.10.3.101, role: workstation, owner: a.mehta, tier: Standard}
+  - {name: ws-fin-102,   ip: 10.10.3.102, role: workstation, owner: s.iyer,  tier: Standard}
+  - {name: ws-hr-104,    ip: 10.10.3.104, role: workstation, owner: k.rao,   tier: Standard}
+  - {name: ws-eng-201,   ip: 10.10.4.201, role: workstation, owner: j.thomas, tier: Standard}
+  - {name: ws-eng-202,   ip: 10.10.4.202, role: workstation, owner: n.khan,  tier: Standard}
+  - {name: ws-mkt-301,   ip: 10.10.5.31, role: workstation, owner: r.das,   tier: Standard}
+  # Low: lab and test machines
+  - {name: dev-lab-01,   ip: 10.10.9.10,  role: lab_machine, tier: Low}
+  - {name: dev-lab-02,   ip: 10.10.9.11,  role: lab_machine, tier: Low}
+  - {name: test-vm-01,   ip: 10.10.9.20,  role: test_vm,     tier: Low}
+
+accounts:
+  - {name: adm.priya,   type: admin,   tier: Critical}
+  - {name: adm.rahul,   type: admin,   tier: Critical}
+  - {name: svc_backup,  type: service, tier: High}
+  - {name: svc_sql,     type: service, tier: High}
+  - {name: svc_deploy,  type: service, tier: High}
+  - {name: it.support,  type: admin,   tier: High}
+  - {name: a.mehta,     type: user,    tier: Standard}
+  - {name: s.iyer,      type: user,    tier: Standard}
+  - {name: k.rao,       type: user,    tier: Standard}
+  - {name: j.thomas,    type: user,    tier: Standard}
+  - {name: n.khan,      type: user,    tier: Standard}
+  - {name: r.das,       type: user,    tier: Standard}
+  - {name: lab.tester,  type: user,    tier: Low}
+
+# Authorised activity. Alerts that match one of these are benign true
+# positives (category B1): the detection is right, the activity is approved.
+approved_activity:
+  - id: vuln-scan
+    description: Weekly authenticated vulnerability scan
+    actor_host: scanner-01
+    targets: [10.10.1.0/24, 10.10.2.0/24, 10.10.9.0/24]
+    window: {day: Tuesday, start: "01:00", end: "04:00", tz: UTC}
+  - id: admin-maintenance
+    description: Server maintenance by named administrators
+    actor_accounts: [adm.priya, adm.rahul]
+    targets: [dc-01, db-prod-01, web-prod-01, web-prod-02, app-prod-01, mail-01]
+    window: {day: Saturday, start: "22:00", end: "02:00", tz: UTC}
+  - id: offsite-backup
+    description: Nightly encrypted backup to the offsite backup provider
+    actor_host: backup-01
+    actor_accounts: [svc_backup]
+    destination_ip: 203.0.113.50
+    window: {day: daily, start: "02:00", end: "03:30", tz: UTC}
+  - id: load-test
+    description: Announced load test of the production web tier
+    actor_host: dev-lab-02
+    targets: [web-prod-01, web-prod-02]
+    window: {day: Thursday, start: "14:00", end: "16:00", tz: UTC}
+  - id: patch-deploy
+    description: Patch and configuration deployment by the deploy service account
+    actor_accounts: [svc_deploy]
+    targets: [app-prod-01, web-prod-02, dev-lab-01, ws-eng-201, ws-eng-202]
+    window: {day: Wednesday, start: "20:00", end: "22:00", tz: UTC}
+
+  - id: helpdesk-support
+    description: IT helpdesk remote sessions to user workstations
+    actor_accounts: [it.support]
+    actor_host: ws-eng-201
+    targets: [ws-fin-101, ws-fin-102, ws-hr-104, ws-eng-202, ws-mkt-301]
+    window: {day: weekdays, start: "09:00", end: "18:00", tz: UTC}
+  - id: external-pentest
+    description: Contracted external penetration test of the web tier (announced in advance)
+    actor_ip: 198.51.100.77
+    targets: [web-prod-01, web-prod-02, app-prod-01]
+    window: {day: Monday, start: "10:00", end: "17:00", tz: UTC}
+
+# Hosts that must never be isolated automatically (see the action risk tiers).
+critical_asset_list: [dc-01, db-prod-01, siem-01, scanner-01]

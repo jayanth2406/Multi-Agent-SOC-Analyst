@@ -1,0 +1,357 @@
+{
+  "generator_version": "0.2.0",
+  "seed": 2026,
+  "fixture": false,
+  "fixture_note": null,
+  "inputs": [
+    {
+      "dataset": "UNSW-NB15",
+      "file": "unsw_nb15_train.csv",
+      "sha256": "6df0e5903d35eefa1d497b6177873be7a7de4b7d5ad5729d6c7221d21c6474b3",
+      "rows": 2280090
+    },
+    {
+      "dataset": "CICIDS2017",
+      "file": "Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv",
+      "sha256": "6ff1580f5f81c0ae28a26f7631721018577f5f7c5e0feac28b795fcfe7b411ee",
+      "rows": 225745
+    },
+    {
+      "dataset": "CICIDS2017",
+      "file": "Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv",
+      "sha256": "ca1824c51bfbb7b3c72290a11be04366ba8815878c6a1cc5c44cb1cee269e99b",
+      "rows": 286467
+    },
+    {
+      "dataset": "CICIDS2017",
+      "file": "Friday-WorkingHours-Morning.pcap_ISCX.csv",
+      "sha256": "53a41c24d570ea83b7ac55b2e94df94e7a8216aeb80a2af0246b6bc8bb543000",
+      "rows": 191033
+    },
+    {
+      "dataset": "CICIDS2017",
+      "file": "Monday-WorkingHours.pcap_ISCX.csv",
+      "sha256": "852c4beb34eda186f32561fa79df7a0747e92e1a6535b01270820dd9ffe17f34",
+      "rows": 529918
+    },
+    {
+      "dataset": "CICIDS2017",
+      "file": "Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv",
+      "sha256": "6bcda3857c2504676034e3ea57762d38393cc734cb377a726bd5cb153961b1b5",
+      "rows": 288602
+    },
+    {
+      "dataset": "CICIDS2017",
+      "file": "Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv",
+      "sha256": "d67066211fb1689c78406f1506f4c44704ecb92088353d5c96d96d6474eb819d",
+      "rows": 170366
+    },
+    {
+      "dataset": "CICIDS2017",
+      "file": "Tuesday-WorkingHours.pcap_ISCX.csv",
+      "sha256": "52b8692ae8c7d2ed04671fe2b98335693c0a92c7ab157d8c8b534d6523080851",
+      "rows": 445909
+    },
+    {
+      "dataset": "CICIDS2017",
+      "file": "Wednesday-workingHours.pcap_ISCX.csv",
+      "sha256": "893c27dc968bf7a8adef1689f90be55ca4a4dc3088fb63d6ff247ac56856df2a",
+      "rows": 692703
+    },
+    {
+      "dataset": "BETH",
+      "file": "beth_test.csv",
+      "sha256": "9e2453557094cc3e0ded1fa85a4323d6d5342781d7f30e3c7dbbf46ba628163a",
+      "rows": 188967
+    },
+    {
+      "dataset": "BETH",
+      "file": "beth_train.csv",
+      "sha256": "22fcfc05449f0030228f65d07626593bb1817be39a6f9c9b4c2f0a094923065b",
+      "rows": 763144
+    },
+    {
+      "dataset": "BETH",
+      "file": "beth_validation.csv",
+      "sha256": "b8dc799bbc379cd5ff6c7c06bd7c0dc293acf0d6f958f78ae932cc3c7207d506",
+      "rows": 188967
+    }
+  ],
+  "warnings": [
+    "no lanl files found under D:\\Multi-Agent-SOC-Analyst\\data\\raw",
+    "no LANL red-team file: C3 alerts are labelled synthetic"
+  ],
+  "total_alerts": 995,
+  "counts": [
+    {
+      "split": "test",
+      "category": "B1",
+      "disposition": "BTP",
+      "n": 22
+    },
+    {
+      "split": "test",
+      "category": "B2",
+      "disposition": "BTP",
+      "n": 22
+    },
+    {
+      "split": "test",
+      "category": "C1",
+      "disposition": "FP",
+      "n": 6
+    },
+    {
+      "split": "test",
+      "category": "C1",
+      "disposition": "TP",
+      "n": 17
+    },
+    {
+      "split": "test",
+      "category": "C2",
+      "disposition": "FP",
+      "n": 5
+    },
+    {
+      "split": "test",
+      "category": "C2",
+      "disposition": "TP",
+      "n": 17
+    },
+    {
+      "split": "test",
+      "category": "C3",
+      "disposition": "TP",
+      "n": 17
+    },
+    {
+      "split": "test",
+      "category": "C4",
+      "disposition": "FP",
+      "n": 6
+    },
+    {
+      "split": "test",
+      "category": "C4",
+      "disposition": "TP",
+      "n": 16
+    },
+    {
+      "split": "test",
+      "category": "C5",
+      "disposition": "FP",
+      "n": 7
+    },
+    {
+      "split": "test",
+      "category": "C5",
+      "disposition": "TP",
+      "n": 17
+    },
+    {
+      "split": "test",
+      "category": "C6",
+      "disposition": "FP",
+      "n": 6
+    },
+    {
+      "split": "test",
+      "category": "C6",
+      "disposition": "TP",
+      "n": 16
+    },
+    {
+      "split": "test",
+      "category": "C7",
+      "disposition": "FP",
+      "n": 5
+    },
+    {
+      "split": "test",
+      "category": "C7",
+      "disposition": "TP",
+      "n": 17
+    },
+    {
+      "split": "train",
+      "category": "B1",
+      "disposition": "BTP",
+      "n": 66
+    },
+    {
+      "split": "train",
+      "category": "B2",
+      "disposition": "BTP",
+      "n": 66
+    },
+    {
+      "split": "train",
+      "category": "C1",
+      "disposition": "FP",
+      "n": 18
+    },
+    {
+      "split": "train",
+      "category": "C1",
+      "disposition": "TP",
+      "n": 51
+    },
+    {
+      "split": "train",
+      "category": "C2",
+      "disposition": "FP",
+      "n": 15
+    },
+    {
+      "split": "train",
+      "category": "C2",
+      "disposition": "TP",
+      "n": 51
+    },
+    {
+      "split": "train",
+      "category": "C3",
+      "disposition": "TP",
+      "n": 51
+    },
+    {
+      "split": "train",
+      "category": "C4",
+      "disposition": "FP",
+      "n": 18
+    },
+    {
+      "split": "train",
+      "category": "C4",
+      "disposition": "TP",
+      "n": 51
+    },
+    {
+      "split": "train",
+      "category": "C5",
+      "disposition": "FP",
+      "n": 24
+    },
+    {
+      "split": "train",
+      "category": "C5",
+      "disposition": "TP",
+      "n": 51
+    },
+    {
+      "split": "train",
+      "category": "C6",
+      "disposition": "FP",
+      "n": 18
+    },
+    {
+      "split": "train",
+      "category": "C6",
+      "disposition": "TP",
+      "n": 51
+    },
+    {
+      "split": "train",
+      "category": "C7",
+      "disposition": "FP",
+      "n": 15
+    },
+    {
+      "split": "train",
+      "category": "C7",
+      "disposition": "TP",
+      "n": 51
+    },
+    {
+      "split": "val",
+      "category": "B1",
+      "disposition": "BTP",
+      "n": 22
+    },
+    {
+      "split": "val",
+      "category": "B2",
+      "disposition": "BTP",
+      "n": 22
+    },
+    {
+      "split": "val",
+      "category": "C1",
+      "disposition": "FP",
+      "n": 6
+    },
+    {
+      "split": "val",
+      "category": "C1",
+      "disposition": "TP",
+      "n": 17
+    },
+    {
+      "split": "val",
+      "category": "C2",
+      "disposition": "FP",
+      "n": 5
+    },
+    {
+      "split": "val",
+      "category": "C2",
+      "disposition": "TP",
+      "n": 17
+    },
+    {
+      "split": "val",
+      "category": "C3",
+      "disposition": "TP",
+      "n": 17
+    },
+    {
+      "split": "val",
+      "category": "C4",
+      "disposition": "FP",
+      "n": 6
+    },
+    {
+      "split": "val",
+      "category": "C4",
+      "disposition": "TP",
+      "n": 18
+    },
+    {
+      "split": "val",
+      "category": "C5",
+      "disposition": "FP",
+      "n": 9
+    },
+    {
+      "split": "val",
+      "category": "C5",
+      "disposition": "TP",
+      "n": 17
+    },
+    {
+      "split": "val",
+      "category": "C6",
+      "disposition": "FP",
+      "n": 6
+    },
+    {
+      "split": "val",
+      "category": "C6",
+      "disposition": "TP",
+      "n": 18
+    },
+    {
+      "split": "val",
+      "category": "C7",
+      "disposition": "FP",
+      "n": 5
+    },
+    {
+      "split": "val",
+      "category": "C7",
+      "disposition": "TP",
+      "n": 17
+    }
+  ]
+}
